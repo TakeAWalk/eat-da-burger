@@ -1,8 +1,10 @@
 var express = require("express");
 var burger = require("../models/burger");
 
+var app = express();
+
 module.exports = function(app) {
-  app.get("/", req, res => {
-    res.setEncoding("Hello World!");
+  app.get("/", (req, res) => {
+    res.send("Hello World!");
   });
 };
