@@ -1,5 +1,9 @@
 var orm = require('../config/orm');
-var burger = {};
+
+function burger(name, devoured = false) {
+  this.name = name;
+  this.devoured = devoured;
+}
 /* orm.insertOne();
 orm.selectAll();
 orm.updateOne(); */
