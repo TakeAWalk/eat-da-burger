@@ -1,19 +1,21 @@
-var connection = require('./connection.js');
+var connection = require("./connection.js");
 
 var orm = {
   selectAll: () => {
-    connection.query('SELECT * FROM burgers;', (err, data) => {
+    console.log("orm:selectAll");
+    connection.query("SELECT * FROM burgers;", (err, data) => {
       if (err) throw err;
-      res.render('index', { tasks: data });
+
+      console.log(data);
     });
   },
 
   insertOne: burger => {
-    console.log('Insert One');
+    console.log("Insert One");
   },
 
   updateOne: burger => {
-    console.log('Update One');
+    console.log("Update One");
   }
 };
 

@@ -1,0 +1,18 @@
+<section class='col-6 toEat'>
+    <h1>Ready to eat</h1>
+    {{#each burger}}
+    {{#unless devoured}}
+    <p>{{id}}:{{burger_name}}:{{devoured}}</p>
+    <input type="submit" value='Devour It!' />
+    {{/unless}}
+    {{/each}}
+</section>
+
+<section class='col-6 devoured'>
+    <h1>Devoured</h1>
+    {{#each burger}}
+    {{#if devoured}}
+    <p>{{id}}:{{burger_name}}:{{devoured}}</p>
+    {{/if}}
+    {{/each}}
+</section>
