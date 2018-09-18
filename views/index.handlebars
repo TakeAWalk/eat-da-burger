@@ -3,12 +3,13 @@
     {{#each burger}}
     {{#unless devoured}}
     <p>{{id}}:{{burger_name}}:{{devoured}}</p>
-    <input type="submit" value='Devour It!' />
+    <button class='devour' data-id="{{id}}" burger_name='{{burger_name}}'>Devour</button>
     {{/unless}}
     {{/each}}
 </section>
 
-<section class='col-6 devoured'>
+<section class='
+        col-6 devoured'>
     <h1>Devoured</h1>
     {{#each burger}}
     {{#if devoured}}

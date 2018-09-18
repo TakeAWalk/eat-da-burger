@@ -1,12 +1,21 @@
 var orm = require("../config/orm");
 
-function burger(name, devoured = false) {
-  this.name = name;
-  this.devoured = devoured;
-  this.selectAll = orm.selectAll();
-}
-/* orm.insertOne();
-orm.selectAll();
-orm.updateOne(); */
+var burger = {
+  all: function(cb) {
+    orm.selectAll(res => {
+      cb(res);
+    });
+  },
+  insert: function(burgerName, cb) {
+    orm.insertOne(burgerName, res => {
+      cb(res);
+    });
+  },
+  update: function(burger_name, devoured, id, cb) {
+    orm.updateOne(burger_name, devoured, id, res => {
+      cb(res);
+    });
+  }
+};
 
-module.export = burger;
+module.exports = burger;
