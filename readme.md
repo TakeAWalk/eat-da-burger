@@ -34,46 +34,33 @@ Welcome to Eat-Da-Burger. Your homepage for crafting and consuming virtual burge
 
 This file contains the html scaffolding and defines the submission form to create a burger. It contains CDNs to jquery and bootstrap.
 
-#### html - home.html & survey.html
+#### index.handlebars
 
-The home and survey html pages provide links to /api/friends endpoint that returns a JSON representation of the friends that have completed the survey. Additionally, the survey provides users with a 10 question survey to contrast personalities. On submit, the profile is compared to all other friends in the database and a "best friend" based on compatibility is returned.
+This file creates the burgers and buttons and arranging the burgers using handlebar logic to show 'ready to devour' burgers on the left and side and 'devoured' burgers on the right hand side.
 
-#### routing - apiRoutes.js & htmlRoutes.js
+#### connection.js
 
-The apiRoutes defines the endpoint /api/friends which accepts both GET and POST requests.
+This file defines the connection to the sql server. A heroku/jawsdb connection is attempted first, if it fails it connects locally.
 
-- The GET request return the friends array as a JSON which contains all friends who have filled out the survey.
+#### orm.js
 
-- The POST request takes a completed survey, formats it and determines the "best friend" by comparing the profiles scores against all friends in the database.
+This file makes sql calls easier by developing generic SQL statement that can be used to make calls to multiple tables. As used in this particular project, it is simplied and somewhat redundant but still relevant as a learning tool on how to use ORMs.
 
-The htmlRoutes direct the user to the survey page when /survey is requested, otherwise a default route is set to send the user to the homepage.
+#### burger.js
+
+The burger.js file is the model of the burger. This file makes references to the orm to execute calls to the sql server.
+
+#### burger_controller.js
+
+The burger_controller.js file defines the api routes for executing functions against the database.
 
 #### server.js
 
-server.js sets up the express server, gathers routes and starts the server.
+This defines the api server and serves the publicically accessible html pages.
 
-### How to use the app?
+#### server-easy.js
 
-#### home.html
-
-![Homepage](https://takeawalk.github.io/eat-da-burger/public/img/main.PNG)
-
-- The primary option here is to 'Go to Survey'. Alternatively you can use the links below to hit the endpoint and get a JSON representation of the friends currently in the database ![JSON of Friends](https://takeawalk.github.io/FriendFinder/screenshots/get-endpoint.PNG)
-- or navigate to the GitHub repo.
-
-#### survey.html
-
-![Survey](https://takeawalk.github.io/FriendFinder/screenshots/survey.PNG)
-
-Complete the survey by filling out your name, providing a url to a photo of yourself and by answering all 10 questions. Once complete, submit the information.
-
-![Submitted Survey](https://takeawalk.github.io/FriendFinder/screenshots/onsubmit.PNG)
-
-You now know who your "best friend" is.
-
-## How do I access the app?
-
-- Navigate to: https://cryptic-cove-16705.herokuapp.com/
+This is an unreqired file I created to demonstrate a function app without following the additional complexity of MVP models. It is unused in the production model of the app.
 
 ## Built Using
 
