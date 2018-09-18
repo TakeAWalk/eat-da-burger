@@ -4,17 +4,15 @@
 
 ### https://cryptic-cove-16705.herokuapp.com
 
+### App Orientation
+
 ### **App Parts**
 
 #### Express Handlebars
 
-Defines the friend object with the following properties:
+##### main.handlebars
 
-- name
-- photo (url)
-- scores
-
-Also contains a method that takes a friend and compares their scores against its own. The smaller the score, the better a match.
+This file contains the html scaffolding and defines the submission form to
 
 #### html - home.html & survey.html
 
@@ -38,7 +36,7 @@ server.js sets up the express server, gathers routes and starts the server.
 
 #### home.html
 
-![Homepage](https://takeawalk.github.io/FriendFinder/screenshots/homepage.PNG)
+![Homepage](https://takeawalk.github.io/eat-da-burger/public/img/main.PNG)
 
 - The primary option here is to 'Go to Survey'. Alternatively you can use the links below to hit the endpoint and get a JSON representation of the friends currently in the database ![JSON of Friends](https://takeawalk.github.io/FriendFinder/screenshots/get-endpoint.PNG)
 - or navigate to the GitHub repo.
@@ -53,9 +51,9 @@ Complete the survey by filling out your name, providing a url to a photo of your
 
 You now know who your "best friend" is.
 
-## How do I use this?
+## How do I access the app?
 
-- Navigate to: https://gentle-tundra-89747.herokuapp.com/
+- Navigate to: https://cryptic-cove-16705.herokuapp.com/
 
 ## Built Using
 
@@ -63,8 +61,8 @@ You now know who your "best friend" is.
 - Node Packages
   - [express](https://www.npmjs.com/package/express)
   - [express-handlebars](https://www.npmjs.com/package/express-handlebars)
-  - [path](https://www.npmjs.com/package/path)
   - [body-parser](https://www.npmjs.com/package/body-parser)
+  - [mysql](https://www.npmjs.com/package/mysql)
 
 ## Author
 
