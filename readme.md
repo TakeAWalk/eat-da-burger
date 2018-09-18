@@ -4,7 +4,27 @@
 
 ### https://cryptic-cove-16705.herokuapp.com
 
-### App Orientation
+### App Overview
+
+Welcome to Eat-Da-Burger. Your homepage for crafting and consuming virtual burgers. This app is to demonstrate a full-stack web app using front-end and back-end technologies.
+
+### App Usage
+
+- The home page shows you a list of all burgers that are ready to devour and that have been devoured.
+
+![Main Page](https://takeawalk.github.io/eat-da-burger/public/img/main.PNG)
+
+- To craft/add a burger, enter the name of the burger and click submit.
+
+![Add A Burger](https://takeawalk.github.io/eat-da-burger/public/img/add.PNG)
+
+- After submitting, the burger is added to the list of available burgers and is ready to be consumed.
+
+![Burger Added](https://takeawalk.github.io/eat-da-burger/public/img/added.PNG)
+
+- Click on the 'devour' button next to a burger to eat it. After doing so, the burger is added to the devoured (right side) column.
+
+![Devoured](https://takeawalk.github.io/eat-da-burger/public/img/devour.PNG)
 
 ### **App Parts**
 
@@ -12,7 +32,7 @@
 
 ##### main.handlebars
 
-This file contains the html scaffolding and defines the submission form to
+This file contains the html scaffolding and defines the submission form to create a burger. It contains CDNs to jquery and bootstrap.
 
 #### html - home.html & survey.html
 
@@ -58,6 +78,8 @@ You now know who your "best friend" is.
 ## Built Using
 
 - [NodeJS](https://nodejs.org/en/)
+- [jQuery](https://jquery.com/)
+- [Bootstrap](https://getbootstrap.com/)
 - Node Packages
   - [express](https://www.npmjs.com/package/express)
   - [express-handlebars](https://www.npmjs.com/package/express-handlebars)

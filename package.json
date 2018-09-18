@@ -2,7 +2,7 @@
   "name": "eat-da-burger",
   "version": "1.0.0",
   "description": "",
-  "main": "server-easy.js",
+  "main": "server.js",
   "engines": {
     "node": "8.11.3"
   },
